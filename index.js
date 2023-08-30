@@ -12,7 +12,7 @@ const addressRouter = require("./routes/addressroutes");
 const orderRouter = require("./routes/orderroutes");
 const categoryRouter = require("./routes/categoryRoutes");
 const productRouter = require("./routes/productroutes");
-console.log("İndexteyim");
+console.log("İndextesadasdsadayim");
 const cors = require("cors");
 var corsOptions = {
     origin: "http://localhost:3000",
