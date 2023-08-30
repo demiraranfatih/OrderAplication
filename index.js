@@ -14,7 +14,6 @@ const categoryRouter = require("./routes/categoryRoutes");
 const productRouter = require("./routes/productroutes");
 
 const cors = require("cors");
-console.log("asdsadsadsa")
 var corsOptions = {
     origin: "http://localhost:3000",
     optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
@@ -57,7 +56,6 @@ app.post(
     loginValidators,
     HomeController.login
     );
-
 app.listen(5000,()=>{
     console.log("Server running great of port 5000");
 })  
