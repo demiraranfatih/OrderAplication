@@ -16,7 +16,8 @@ exports.ProductController = {
     const product = await Product.create({
         name : req.body.name,
         price : req.body.price,
-        categoryCategoryID : req.body.catId
+        categoryCategoryID : req.body.catId,
+        image : req.body.image
     })
     debugger
     res.send({message :"Basariyla ürün eklendi.",product})
