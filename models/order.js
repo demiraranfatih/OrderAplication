@@ -13,7 +13,8 @@ const Order = sequelise.define('orders', {
        allowNull : false
     },
     totalPrice: DataTypes.INTEGER,
-    siparisTarihi : DataTypes.DATE
+    siparisTarihi : DataTypes.DATE,
+    orderNote : DataTypes.STRING
     
   },
   {

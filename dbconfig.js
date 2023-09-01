@@ -9,7 +9,7 @@ const sequelise = new Sequelize('projectexpress','root','fatih0727',{
 
 function init() {
     sequelise.sync({
-        force : true
+        alter : true
     }).then(res => {
         console.log("Database baglantısı kuruldu")
     }).catch(err => console.log("Errors",err))

@@ -10,8 +10,8 @@ const Product = sequelise.define('products', {
     },
     name : DataTypes.STRING,
     price : DataTypes.INTEGER,
-    image : DataTypes.STRING // resim yolunu burada tutacağım
-    
+    image : DataTypes.STRING, // resim yolunu burada tutacağım
+    explanation : DataTypes.STRING
   },
   {
     timestamps : false

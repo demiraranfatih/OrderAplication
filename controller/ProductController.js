@@ -15,6 +15,7 @@ exports.ProductController = {
    else{
     const product = await Product.create({
         name : req.body.name,
+        explanation : req.body.explanation,
         price : req.body.price,
         categoryCategoryID : req.body.catId,
         image : req.body.image

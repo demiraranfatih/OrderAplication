@@ -21,13 +21,14 @@ exports.OrderController = {
       return res.status(404).json({ error: 'User not found' });
     }
 
-    const { iscredit, adreAddressId, cartItems, totalPrice } = req.body;
+    const { iscredit, adreAddressId, cartItems, totalPrice,orderNote } = req.body;
 
     const order = await Order.create({
       iscredit :iscredit,
       userId: user.id,
       adreAddressId :adreAddressId,
       totalPrice : totalPrice,
+      orderNote : orderNote,
       siparisTarihi : siparisTarihim 
     });
 
