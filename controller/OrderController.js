@@ -7,10 +7,12 @@ const { orderResponseParser } = require("../parser/orderResponseParser");
 const { userResponseParser } = require("../parser/userResponseParser");
 const jwt = require("jsonwebtoken");
 const { OrderProduct } = require("../models/orderproduct");
+
 exports.OrderController = {
  async create(req,res)
  {
   try {
+    const siparisTarihim = new Date();
     const token = req.headers.authorization.split(' ')[1];
     const decodedToken = jwt.verify(token, process.env.SECRET);
 
@@ -25,7 +27,8 @@ exports.OrderController = {
       iscredit :iscredit,
       userId: user.id,
       adreAddressId :adreAddressId,
-      totalPrice : totalPrice
+      totalPrice : totalPrice,
+      siparisTarihi : siparisTarihim 
     });
 
     const orderId = order.orderID;

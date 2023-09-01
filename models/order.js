@@ -12,7 +12,8 @@ const Order = sequelise.define('orders', {
        type:  DataTypes.BOOLEAN,
        allowNull : false
     },
-    totalPrice: DataTypes.INTEGER
+    totalPrice: DataTypes.INTEGER,
+    siparisTarihi : DataTypes.DATE
     
   },
   {
