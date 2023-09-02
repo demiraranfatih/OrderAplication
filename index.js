@@ -34,8 +34,8 @@ next();
 });
 
 app.use(express.json());
-const {init} =require("./dbconfig")
-init();
+//const {init} =require("./dbconfig")
+//init();
 app.use("/user",cors(corsOptions),JWTController.verifyAccessToken.bind(JWTController),userRouter)
 app.use("/address",cors(corsOptions),JWTController.verifyAccessToken.bind(JWTController),addressRouter)
 app.use("/order",cors(corsOptions),JWTController.verifyAccessToken.bind(JWTController),orderRouter)
